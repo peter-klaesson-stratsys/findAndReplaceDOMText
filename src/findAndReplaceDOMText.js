@@ -238,7 +238,7 @@ window.findAndReplaceDOMText = (function() {
           var pnode = el.parentNode;
           pnode.insertBefore(el.firstChild, el);
           pnode.removeChild(el);
-          pnode.normalize();
+          setTimeout(pnode.normalize,0);
         });
         return el;
       } else {
@@ -268,7 +268,7 @@ window.findAndReplaceDOMText = (function() {
             var pnode = el.parentNode;
             pnode.insertBefore(el.firstChild, el);
             pnode.removeChild(el);
-            pnode.normalize();
+            setTimeout(pnode.normalize,0);
           }
         });
         return elB;
